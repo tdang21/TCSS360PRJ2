@@ -1,7 +1,7 @@
 package model;
 
 /** The sensor which returns wind speed data, 0 - 200 MPH. 
- * 
+ * Sensor refreshes every 3s.
  * @author chanteltrainer
  *
  */
@@ -10,6 +10,7 @@ public class WindSpeedSensor extends AbstractSensor {
     private Integer myWindSpeed;
     
     public WindSpeedSensor() {
+        updateInterval = 3000; //Amount of time between each data refresh - 3s
         refreshData();
     }
     
@@ -31,5 +32,6 @@ public class WindSpeedSensor extends AbstractSensor {
     public void setWindSpeed(Integer theWindSpeed) {
         myWindSpeed = theWindSpeed;
     }
+
 
 }

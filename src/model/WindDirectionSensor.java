@@ -11,6 +11,7 @@ public class WindDirectionSensor extends AbstractSensor {
     
     /** Constructor for a WindDirectionSensor.*/
     public WindDirectionSensor() {
+        updateInterval = 3000; //Amount of time between each data refresh - 3s
         refreshData();
     }
     
