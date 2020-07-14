@@ -16,8 +16,8 @@ public class UVSensor extends AbstractSensor {
     private Random rand = new Random();
     
     /** Constructor for an UVSensor.*/
-    public TemperatureSensor() {
-        updateInterval = 50000; // refresh rate 10s
+    public UVSensor() {
+        updateInterval = 50000; // refresh rate 50s
         refreshData();
     }
     
@@ -32,7 +32,7 @@ public class UVSensor extends AbstractSensor {
     }
     
     public void setRadiationDose() {
-        myTemperature = MAXRADIATIONDOSE * rand.nextDouble();
+        myRadiationDose = MAXRADIATIONDOSE * rand.nextDouble();
     }
     
     public double getRadiationDose() {
